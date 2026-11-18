@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3b1025">
+
+<title>A Letter, Just for You ♡</title>
+
+<style>
+:root {
+  --wine: #3b1025;
+  --cream: #fff7f2;
+  --pink: #ff6f9d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  color: var(--cream);
+  font-family: Georgia, serif;
+  background: radial-gradient(
+    circle at 50% 35%,
+    #762541,
+    #4b1730 42%,
+    #210b19
+  );
+}
+
+.glow {
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #ff4f8b;
+  filter: blur(100px);
+  opacity: .18;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.wrap {
+  width: min(100%, 520px);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f6bdce;
+}
+
+h1 {
+  font-size: clamp(30px, 8vw, 43px);
+  font-weight: normal;
+  margin: 15px 0 10px;
+}
+
+.sub {
+  font: 14px/1.7 Arial, sans-serif;
+  color: #f2d7df;
+}
+
+.heart {
+  font-size: 58px;
+  color: #ff789f;
+  text-shadow: 0 0 24px #ff4f8b;
+  margin: 25px 0;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+button {
+  border: 1px solid #ff9bb8;
+  background: linear-gradient(135deg, #ff6f9d, #d83e75);
+  color: white;
+  border-radius: 999px;
+  padding: 14px 25px;
+  font: bold 14px Arial, sans-serif;
+  cursor: pointer;
+  min-height: 48px;
+  box-shadow: 0 8px 28px #e8497b55;
+}
+
+.hint {
+  color: #e9b9c9;
+  font: 12px Arial, sans-serif;
+  margin-top: 15px;
+}
+
+.letter {
+  display: none;
+  margin: 26px auto 0;
+  padding: 26px 22px;
+  text-align: left;
+  color: #452032;
+  background: linear-gradient(145deg, #fffaf6, #f9e8e9);
+  border-radius: 17px;
+  box-shadow: 0 18px 55px #13050e88;
+  animation: rise .7s ease both;
+}
+
+.letter.show {
+  display: block;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.letter h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+  color: #8c3153;
+  margin-bottom: 20px;
+}
+
+.letter p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.sign {
+  text-align: right;
+  font-style: italic;
+  margin-top: 22px;
+}
+
+.tiny {
+  text-align: center;
+  color: #f3c7d4;
+  font: 11px Arial, sans-serif;
+  margin-top: 24px;
+}
+
+.spark {
+  position: fixed;
+  bottom: -25px;
+  color: #ff8eae;
+  opacity: .6;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .letter {
+    padding: 34px 38px;
+  }
+
+  .letter p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<main class="wrap">
+
+  <div class="eyebrow">
+    A little something for you
+  </div>
+
+  <h1>For you, Quincy</h1>
+
+  <p class="sub">
+    Some things are better said with a little
+    time, thought, and sincerity.
+  </p>
+
+  <div class="heart">♡</div>
+
+  <button id="openBtn">
+    Open my letter
+  </button>
+
+  <div class="hint" id="hint">
+    A small note, written just for you.
+  </div>
+
+  <article class="letter" id="letter">
+
+    <h2>Dear Quincy,</h2>
+
+    <p>
+      I don't always know how to put my thoughts
+      into words, but I wanted to make something
+      you could keep and look back on someday.
+    </p>
+
+    <p>
+      First, I just want to say how much I
+      appreciate you. I'm grateful that I got
+      the chance to meet you and slowly get to
+      know you. I admire your heart, your humility,
+      your faith, and even the little things you
+      do that you probably don't realize I notice.
+    </p>
+
+    <p>
+     I hope you know how much I appreciate the person you are. 
+     There's something beautiful about getting to know someone beyond the things that first caught your attention, discovering their thoughts, understanding their perspectives, and appreciating the little details that make them who they are.
+      I admire your individuality, your heart, and the many things that make you uniquely you.
+       The more I get to know you, the more I realize that there's so much more to appreciate about you
+        and that's something I genuinely look forward to discovering.
+    </p>
+
+    <p>
+      As I continue getting to know you, I genuinely
+      want to learn more about you, including
+      understanding your ADHD better. I want to
+      understand how you experience things, how
+      your mind works, and how certain things may
+      affect you differently. I know that takes
+      patience, communication, and an open mind.
+      I don't want you to feel like you have to
+      constantly explain or justify yourself.
+      I simply want to understand you better so
+      I can be more considerate, supportive, and
+      mindful of your needs.
+    </p>
+
+
+    <p>
+      Above everything, I pray that God continues
+      to guide us individually and in whatever
+      direction our paths may lead. I hope we keep
+      growing, becoming better individuals, and
+      strengthening our faith.
+    </p>
+
+    <p>
+      Thank you for being someone I get to know
+      and appreciate. I'm genuinely glad our paths
+      crossed, and I look forward to discovering
+      more about the person you are, one day at a time.
+    </p>
+
+    <p>
+      I hope this reminds you that you are
+      appreciated, valued, and worthy of kindness—
+      not because of what you can give someone,
+      but simply because of who you are. I love every version of you.
+    </p>
+
+    <p class="sign">
+      Your one and only,<br>
+      <strong>Gabby</strong>
+    </p>
+
+  </article>
+
+  <div class="tiny">
+    Made with care ♡
+  </div>
+
+</main>
+
+<script>
+const button = document.getElementById("openBtn");
+const letter = document.getElementById("letter");
+const hint = document.getElementById("hint");
+
+button.addEventListener("click", () => {
+
+  const isOpen = letter.classList.toggle("show");
+
+  button.textContent = isOpen
+    ? "Close my letter"
+    : "Open my letter";
+
+  button.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+  hint.textContent = isOpen
+    ? "Take your time. This is for you."
+    : "A small note, written just for you.";
+
+  if (isOpen) {
+    setTimeout(() => {
+      letter.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 80);
+  }
+});
+
+// Floating hearts
+for (let i = 0; i < 13; i++) {
+
+  const spark = document.createElement("span");
+
+  spark.className = "spark";
+
+  spark.textContent = ["♡", "♥", "✧"][i % 3];
+
+  spark.style.left = Math.random() * 100 + "vw";
+
+  spark.style.animationDuration =
+    (9 + Math.random() * 10) + "s";
+
+  spark.style.animationDelay =
+    (-Math.random() * 15) + "s";
+
+  spark.style.fontSize =
+    (12 + Math.random() * 15) + "px";
+
+  document.body.appendChild(spark);
+}
+</script>
+
+</body>
+</html>
